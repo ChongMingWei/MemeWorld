@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -70,7 +71,9 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     }
 
     public void Entersearch(View view) {
-        
+        Intent intent;
+        intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
     }
 
     //Listen to the page swipe
