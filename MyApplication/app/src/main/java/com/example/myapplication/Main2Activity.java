@@ -69,7 +69,9 @@ public class Main2Activity extends AppCompatActivity {
         Toast.makeText(this, "refuse", Toast.LENGTH_LONG).show();
     }
     public void agreefunc(View view){
-
+        Intent intent;
+        intent = new Intent(this, Main4Activity.class);
+        startActivity(intent);
         Toast.makeText(this, "agree", Toast.LENGTH_LONG).show();
     }
     public void searchfunc(View view){
