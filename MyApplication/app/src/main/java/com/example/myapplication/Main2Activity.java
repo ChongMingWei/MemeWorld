@@ -1,17 +1,20 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
-    private Button btn_agree;
-    private Button btn_refuse;
-    private Button btn_search;
+    private ImageButton btn_agree;
+    private ImageButton btn_refuse;
+    private ImageButton btn_search;
+    private ImageButton btn_dashboard;
     private TextView txt_dialog;
     private EditText edt_keyword;
     private int statenum = 0;
@@ -26,6 +29,7 @@ public class Main2Activity extends AppCompatActivity {
         btn_agree = findViewById(R.id.button);
         btn_refuse = findViewById(R.id.button3);
         btn_search = findViewById(R.id.button4);
+        btn_dashboard = findViewById(R.id.imageButton);
         txt_dialog = findViewById(R.id.textView);
         edt_keyword = findViewById(R.id.editText);
         statenum = 0;
@@ -70,5 +74,11 @@ public class Main2Activity extends AppCompatActivity {
     }
     public void searchfunc(View view){
         Toast.makeText(this, "search", Toast.LENGTH_LONG).show();
+    }
+
+    public void EnterDashBoard(View view) {
+        Intent intent;
+        intent = new Intent(this, Main3Activity.class);
+        startActivity(intent);
     }
 }
